@@ -12,8 +12,8 @@ public class ProcessPipe {
 
 	public static void main(String[] args) {
 		try {
-			Process ls = new ProcessBuilder("ls","-la").start();
-			Process grep = new ProcessBuilder("grep", "@").start();
+			Process ls = new ProcessBuilder("ls","-l").start();
+			Process grep = new ProcessBuilder("grep", "bin").start();
 			
 			//Connect ls output to a reader and wait for it to finish
 			BufferedReader readerA = new BufferedReader(new InputStreamReader(ls.getInputStream(), "UTF-8"));
